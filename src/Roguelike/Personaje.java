@@ -24,9 +24,9 @@ public abstract class Personaje {
 	
 	public abstract void mover(int x, int y);
 	
-	public void setX (int x){	this.posicion_.add(0, x);	}
+	public void setX (int x){	this.posicion_.clear(); this.posicion_.add(x);	this.posicion_.add(this.posicion_.get(1));	}
 	public void setY (int y){	this.posicion_.add(1, y);	}
-	public void setPosicion (int x, int y){	this.posicion_.add(0, x);	this.posicion_.add(1, y);	}
+	public void setPosicion (int x, int y){	this.posicion_.clear();	this.posicion_.add(x);	this.posicion_.add(y);	}
 	
 	public int getX (){	return(this.posicion_.get(0));	}
 	public int getY (){	return(this.posicion_.get(1));	}	
