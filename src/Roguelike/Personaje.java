@@ -4,7 +4,7 @@ import java.util.*;
 
 public abstract class Personaje {
 	
-	private ArrayList<int> posicion_;
+	private ArrayList<Integer> posicion_;
 	
 	
 	
@@ -16,20 +16,20 @@ public abstract class Personaje {
 	
 	public Personaje(int x, int y){
 		
-		this.posicion_ = new ArrayList<int>();
+		this.posicion_ = new ArrayList<Integer>();
 		this.posicion_.add(x);
-		this.posicion_add(y);
+		this.posicion_.add(y);
 		
 	}
 	
-	public abstract boolean mover(int x, int y);
+	public abstract void mover(int x, int y);
 	
-	public void setX (int x){	this.posicion_[0] = x;	}
-	public void setY (int y){	this.posicion_[1] = y;	}
-	public void setPosicion (int x, int y){	this.posicion_[0] = x;	this-posicion_[1] = y;	}
+	public void setX (int x){	this.posicion_.add(0, x);	}
+	public void setY (int y){	this.posicion_.add(1, y);	}
+	public void setPosicion (int x, int y){	this.posicion_.add(0, x);	this.posicion_.add(1, y);	}
 	
 	public int getX (){	return(this.posicion_.get(0));	}
 	public int getY (){	return(this.posicion_.get(1));	}	
-	public ArrayList<int> getPosicion (){	return(this.posicion_);	}
+	public ArrayList<Integer> getPosicion (){	return(this.posicion_);	}
 
 }
